@@ -4,7 +4,7 @@ import React from 'react';
 import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
 import StatCard from '@/components/StatCard';
-import { Calendar, Users, Clock, TrendingUp, ChevronRight, Bell } from 'lucide-react';
+import { Calendar, Users, Clock, ChevronRight, Bell } from 'lucide-react';
 
 export default function DashboardPage() {
     // Mock data for upcoming events

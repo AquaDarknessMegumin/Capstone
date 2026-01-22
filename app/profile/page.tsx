@@ -104,7 +104,7 @@ export default function ProfilePage() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm p-5">
+                            <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm p-5 transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-xl cursor-pointer">
                                 <div className="flex items-center justify-between">
                                     <div>
                                         <p className="text-sm text-gray-500 dark:text-gray-400">Total Attendees</p>
@@ -115,7 +115,7 @@ export default function ProfilePage() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm p-5">
+                            <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm p-5 transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-xl cursor-pointer">
                                 <div className="flex items-center justify-between">
                                     <div>
                                         <p className="text-sm text-gray-500 dark:text-gray-400">Member Since</p>

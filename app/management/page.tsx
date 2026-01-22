@@ -646,10 +646,10 @@ export default function ManagementPage() {
             {/* Edit User Modal */}
             {
                 isEditModalOpen && editingMember && (
-                    <div className="fixed inset-0 bg-black/30 flex items-center justify-center z-50">
-                        <div className="bg-white rounded-xl shadow-2xl p-8 w-[450px]">
+                    <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center z-50">
+                        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-8 w-[450px]">
                             {/* Modal Title */}
-                            <h2 className="text-lg text-gray-600 mb-6">Edit User</h2>
+                            <h2 className="text-lg text-gray-600 dark:text-gray-300 mb-6">Edit User</h2>
 
                             {/* Email Input */}
                             <div className="mb-4">
@@ -658,7 +658,7 @@ export default function ManagementPage() {
                                     placeholder="E-mail"
                                     value={editEmail}
                                     onChange={(e) => setEditEmail(e.target.value)}
-                                    className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm text-gray-700 outline-none focus:border-[#3D518C] transition-colors"
+                                    className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-3 text-sm text-gray-700 dark:text-white dark:bg-gray-700 outline-none focus:border-[#3D518C] dark:focus:border-indigo-500 transition-colors"
                                 />
                             </div>
 
@@ -667,13 +667,13 @@ export default function ManagementPage() {
                                 <button
                                     type="button"
                                     onClick={() => setIsEditRoleDropdownOpen(!isEditRoleDropdownOpen)}
-                                    className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm text-left flex items-center justify-between outline-none focus:border-[#3D518C] transition-colors"
+                                    className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-3 text-sm text-left flex items-center justify-between outline-none focus:border-[#3D518C] dark:focus:border-indigo-500 transition-colors dark:bg-gray-700"
                                 >
-                                    <span className="text-gray-700">
+                                    <span className="text-gray-700 dark:text-white">
                                         {editRole}
                                     </span>
                                     <svg
-                                        className={`w-4 h-4 text-gray-500 transition-transform ${isEditRoleDropdownOpen ? 'rotate-180' : ''}`}
+                                        className={`w-4 h-4 text-gray-500 dark:text-gray-400 transition-transform ${isEditRoleDropdownOpen ? 'rotate-180' : ''}`}
                                         fill="none"
                                         stroke="currentColor"
                                         viewBox="0 0 24 24"
@@ -684,18 +684,18 @@ export default function ManagementPage() {
 
                                 {/* Dropdown Options */}
                                 {isEditRoleDropdownOpen && (
-                                    <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-300 rounded-lg shadow-lg z-10 overflow-hidden">
+                                    <div className="absolute top-full left-0 right-0 mt-1 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg z-10 overflow-hidden">
                                         <button
                                             type="button"
                                             onClick={() => handleSelectEditRole('Core Member')}
-                                            className="w-full px-4 py-3 text-sm text-left text-gray-700 hover:bg-gray-50 border-b border-gray-200"
+                                            className="w-full px-4 py-3 text-sm text-left text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600 border-b border-gray-200 dark:border-gray-600"
                                         >
                                             Core Member
                                         </button>
                                         <button
                                             type="button"
                                             onClick={() => handleSelectEditRole('Volunteer')}
-                                            className="w-full px-4 py-3 text-sm text-left text-gray-700 hover:bg-gray-50"
+                                            className="w-full px-4 py-3 text-sm text-left text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600"
                                         >
                                             Volunteer
                                         </button>
@@ -721,7 +721,7 @@ export default function ManagementPage() {
                                 </button>
                                 <button
                                     onClick={handleSaveEdit}
-                                    className="px-10 py-2.5 bg-white border border-gray-300 text-gray-600 text-sm font-medium rounded-lg hover:bg-gray-50 transition-colors"
+                                    className="px-10 py-2.5 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-200 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors"
                                 >
                                     Save
                                 </button>
@@ -734,10 +734,10 @@ export default function ManagementPage() {
             {/* Remove User Confirmation Modal */}
             {
                 isRemoveModalOpen && (
-                    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[60]">
-                        <div className="bg-white rounded-xl shadow-2xl px-12 py-8 text-center">
+                    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-[60]">
+                        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl px-12 py-8 text-center">
                             {/* Confirmation Text */}
-                            <p className="text-gray-500 text-lg mb-8">Remove User?</p>
+                            <p className="text-gray-500 dark:text-gray-300 text-lg mb-8">Remove User?</p>
 
                             {/* Action Buttons */}
                             <div className="flex justify-center gap-4">
@@ -749,7 +749,7 @@ export default function ManagementPage() {
                                 </button>
                                 <button
                                     onClick={handleConfirmRemove}
-                                    className="px-10 py-2.5 bg-white border border-gray-300 text-gray-600 text-sm font-medium rounded-lg hover:bg-gray-50 transition-colors"
+                                    className="px-10 py-2.5 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-200 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors"
                                 >
                                     Remove
                                 </button>
